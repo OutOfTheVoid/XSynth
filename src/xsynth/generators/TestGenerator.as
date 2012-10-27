@@ -1,3 +1,10 @@
+/*
+XSynth audio synthesis library
+© Liam Taylor 2012
+
+Test Generator:
+A Generator used generate a test tone. ( 440 A at peak-to-peak level )
+*/
 package xsynth.generators
 {
 	
@@ -16,7 +23,7 @@ package xsynth.generators
 		public function TestGenerator ()
 		{
 			
-			p_osc = new SquareOscillator ( 440 );
+			p_osc = new SineOscillator ( 440 );
 			l_num = 1;
 			
 		}

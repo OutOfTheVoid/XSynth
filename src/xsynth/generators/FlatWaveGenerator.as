@@ -1,3 +1,10 @@
+/*
+XSynth audio synthesis library
+© Liam Taylor 2012
+
+Flat Wave Generator:
+Generator used to play an un-altered generic wave from an oscilator instance
+*/
 package xsynth.generators
 {
 	import xsynth.oscillators.IOscillator;

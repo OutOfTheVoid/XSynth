@@ -1,3 +1,10 @@
+/*
+XSynth audio synthesis library
+© Liam Taylor 2012
+
+Sawtooth Oscillator:
+An oscillator used to create a sawtooth wave
+*/
 package xsynth.oscillators
 {
 	

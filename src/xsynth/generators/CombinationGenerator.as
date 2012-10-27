@@ -1,3 +1,10 @@
+/*
+XSynth audio synthesis library
+© Liam Taylor 2012
+
+Combination Generator:
+Generator used to algorythmically combine two generators
+*/
 package xsynth.generators
 {
 	
@@ -6,11 +13,11 @@ package xsynth.generators
 	public class CombinationGenerator implements IGenerator
 	{
 		
-		public static const ADDATIVE_FLAT:uint = 1;
-		public static const ADDATIVE_MEAN:uint = 2;
-		public static const MULTIPLICATIVE:uint = 3;
-		public static const SUBTRACTIVE:uint = 4;
-		public static const DIVISITIVE:uint = 5;
+		public static const ADDATIVE_FLAT:uint = 1; // o = a + b
+		public static const ADDATIVE_MEAN:uint = 2; // o = ( a + b ) / 2
+		public static const MULTIPLICATIVE:uint = 3;// o = a * b
+		public static const SUBTRACTIVE:uint = 4;   // o = a - b
+		public static const DIVISITIVE:uint = 5;    // o = a / b
 		
 		private var c_fnc:Function;
 		

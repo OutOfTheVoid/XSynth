@@ -1,3 +1,10 @@
+/*
+XSynth audio synthesis library
+© Liam Taylor 2012
+
+Oscillator Interface:
+An interface used to describe the standard for an oscillator.
+*/
 package xsynth.oscillators
 {
 	

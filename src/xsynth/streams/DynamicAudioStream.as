@@ -1,3 +1,11 @@
+/*
+XSynth audio synthesis library
+© Liam Taylor 2012
+
+Dynamic Audio Stream:
+An output stream that plays directly to the flash sound API
+can be dynamically changed while playing
+*/
 package xsynth.streams
 {
 	
