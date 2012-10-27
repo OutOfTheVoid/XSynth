@@ -5,7 +5,7 @@ XSynth audio synthesis library
 Sawtooth Oscillator:
 An oscillator used to create a square wave
 */
-package xsynth.oscillators
+package XSynth.oscillators
 {
 	
 	public class SquareOscillator implements IOscillator
@@ -16,6 +16,8 @@ package xsynth.oscillators
 		private var f_div:Number;
 		private var p_num:Number;
 		private var w_num:Number;
+		
+		private var s_rat:Number;
 		
 		public function SquareOscillator ( frequencey:Number = 440, phase:Number = 0, pulseWidth:Number = 0.5 )
 		{
@@ -29,7 +31,7 @@ package xsynth.oscillators
 		public final function ValueAt ( index:Number ) : Number
 		{
 			
-			return ( ( ( p_num + ( index * f_div / 44100 ) ) % 1 ) < w_num ) ? 1 : -1;
+			return ( ( ( p_num + ( index * f_div / s_rat ) ) % 1 ) < w_num ) ? 1 : -1;
 			
 		}
 		
@@ -72,6 +74,13 @@ package xsynth.oscillators
 		{
 			
 			return p_num;
+			
+		}
+		
+		public final function SetSampleRate ( rate:uint ) : void
+		{
+			
+			s_rat = rate;
 			
 		}
 		

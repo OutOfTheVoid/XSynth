@@ -5,7 +5,7 @@ XSynth audio synthesis library
 Sawtooth Oscillator:
 An oscillator used to create a triangle wave
 */
-package xsynth.oscillators
+package XSynth.oscillators
 {
 	
 	public class TriangleOscillator implements IOscillator
@@ -13,6 +13,8 @@ package xsynth.oscillators
 		
 		private var f_div:Number;
 		private var p_num:Number;
+		
+		private var s_rat:Number;
 		
 		public function TriangleOscillator ( frequencey:Number = 440, phase:Number = 0 )
 		{
@@ -25,7 +27,7 @@ package xsynth.oscillators
 		public final function ValueAt ( index:Number ) : Number
 		{
 			
-			var v:Number = ( ( p_num + ( index * f_div / 44100 ) ) % 1 ) * -4 + 2;
+			var v:Number = ( ( p_num + ( index * f_div / s_rat ) ) % 1 ) * -4 + 2;
 			v = ( v > 0 ) ? v : -v;
 			-- v;
 			return v;

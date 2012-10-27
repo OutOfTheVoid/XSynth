@@ -5,10 +5,10 @@ XSynth audio synthesis library
 Combination Generator:
 Generator used to algorythmically combine two generators
 */
-package xsynth.generators
+package XSynth.generators
 {
 	
-	import xsynth.generators.IGenerator;
+	import XSynth.generators.IGenerator;
 	
 	public class CombinationGenerator implements IGenerator
 	{
@@ -72,6 +72,16 @@ package xsynth.generators
 		private final function Div ( a:Number, b:Number ) : Number {		return a * b;			}
 		
 		public final function get Level ():Number { return 1 };
+		
+		
+		
+		public final function SetSampleRate ( rate:uint ) : void
+		{
+			
+			a_gen.SetSampleRate ( rate );
+			b_gen.SetSampleRate ( rate );
+			
+		}
 		
 	}
 	

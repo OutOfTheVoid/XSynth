@@ -5,10 +5,12 @@ XSynth audio synthesis library
 Generator Interface:
 An interface to define the standard used for Generator instances for use by streams
 */
-package xsynth.generators
+package XSynth.generators
 {
 	
-	public interface IGenerator
+	import XSynth.IXSRateDependant;
+	
+	public interface IGenerator extends IXSRateDependant
 	{
 		
 		function Data ( index:Number ) : Number;

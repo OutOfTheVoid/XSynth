@@ -4,14 +4,15 @@ plays an alternating sine wave and square wave.
 */
 package
 {
-	import flash.display.Sprite;
 	
-	import xsynth.generators.CombinationGenerator;
-	import xsynth.generators.FlatWaveGenerator;
-	import xsynth.oscillators.IOscillator;
-	import xsynth.oscillators.SineOscillator;
-	import xsynth.oscillators.SquareOscillator;
-	import xsynth.streams.DynamicAudioStream;
+	import XSynth.generators.CombinationGenerator;
+	import XSynth.generators.FlatWaveGenerator;
+	import XSynth.oscillators.IOscillator;
+	import XSynth.oscillators.SineOscillator;
+	import XSynth.oscillators.SquareOscillator;
+	import XSynth.streams.DynamicAudioStream;
+	
+	import flash.display.Sprite;
 	
 	public class Main extends Sprite
 	{
@@ -35,13 +36,13 @@ package
 		public function Main ()
 		{
 			
-			ostream = new DynamicAudioStream ();
+			ostream = new DynamicAudioStream ( 8192 );
 			
 			sineOsc = new SineOscillator ( 523.25, 0 ); // Sine oscillator at 523.25 Hz, or C5
 			squareOsc = new SquareOscillator ( 783.99, 0, 0.5 ); // Square wave oscillator at 783.99 Hz, or G5
 			
-			wave1 = new FlatWaveGenerator ( sineOsc, 1, 0 );
-			wave2 = new FlatWaveGenerator ( squareOsc, 1, 0 );
+			wave1 = new FlatWaveGenerator ( sineOsc, 0.25, 0 );
+			wave2 = new FlatWaveGenerator ( squareOsc, 0.25, 0 );
 			
 			variOsc1 = new SquareOscillator ( 0.5, 0, 0.5 );   //Phase: 0     ( Both at 1/2 Hz )
 			variOsc2 = new SquareOscillator ( 0.5, 0.5, 0.5 ); //Phase: 0.5 
@@ -55,6 +56,7 @@ package
 			ostream.AddGenerator ( mulGen1 ); // Add generators to the stream for playback
 			ostream.AddGenerator ( mulGen2 );
 			
+			ostream.BrodcastRate ();
 			ostream.Start (); // Start playing
 			
 		}

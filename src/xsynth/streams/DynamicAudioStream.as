@@ -6,8 +6,10 @@ Dynamic Audio Stream:
 An output stream that plays directly to the flash sound API
 can be dynamically changed while playing
 */
-package xsynth.streams
+package XSynth.streams
 {
+	
+	import XSynth.generators.IGenerator;
 	
 	import flash.events.Event;
 	import flash.events.EventDispatcher;
@@ -15,8 +17,6 @@ package xsynth.streams
 	import flash.media.Sound;
 	import flash.media.SoundChannel;
 	import flash.utils.ByteArray;
-	
-	import xsynth.generators.IGenerator;
 	
 	public class DynamicAudioStream implements IOutputStream
 	{
@@ -86,6 +86,24 @@ package xsynth.streams
 			
 		}
 		
+		public final function BrodcastRate () : void
+		{
+			
+			var ai:uint = 0;
+			
+			a_num = a_gen.length;
+			
+			while ( ai < a_num )
+			{
+				
+				a_gen [ ai ].SetSampleRate ( 44100 );
+				
+				ai ++;
+				
+			}
+			
+		}
+		
 		public final function GetAudio ( S:SampleDataEvent ) : void
 		{
 			
@@ -124,6 +142,14 @@ package xsynth.streams
 				si ++;
 				
 			}
+			
+		}
+		
+		public final function SetSampleRate ( rate:uint ) : void
+		{
+			
+			if ( rate != 44100 )
+				throw "Error: cannot set a dynamic output stream to a different sample rate.";
 			
 		}
 		

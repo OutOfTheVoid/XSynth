@@ -5,7 +5,7 @@ XSynth audio synthesis library
 Sawtooth Oscillator:
 An oscillator used to create a sine wave
 */
-package xsynth.oscillators
+package XSynth.oscillators
 {
 	
 	public class SineOscillator implements IOscillator
@@ -15,6 +15,8 @@ package xsynth.oscillators
 		
 		private var f_div:Number;
 		private var p_num:Number;
+		
+		private var s_rat:Number;
 		
 		public function SineOscillator ( frequencey:Number = 440, phase:Number = 0 )
 		{
@@ -27,7 +29,7 @@ package xsynth.oscillators
 		public final function ValueAt ( index:Number ) : Number
 		{
 			
-			return Math.sin ( p_num + PI2 * ( index * f_div / 44100 ) );
+			return Math.sin ( p_num + PI2 * ( index * f_div / s_rat ) );
 			
 		}
 		
@@ -70,6 +72,13 @@ package xsynth.oscillators
 		{
 			
 			return p_num / PI2;
+			
+		}
+		
+		public final function SetSampleRate ( rate:uint ) : void
+		{
+			
+			s_rat = rate;
 			
 		}
 		
