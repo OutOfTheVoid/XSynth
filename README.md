@@ -1,5 +1,5 @@
 XSynth
 ======
 
-XSynth as3 audio synthesis library
-----------------------------------
+AS3 audio synthesis library
+---------------------------
