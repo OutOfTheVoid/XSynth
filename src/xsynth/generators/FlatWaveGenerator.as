@@ -14,19 +14,21 @@ package xsynth.generators
 		
 		private var w_osc:IOscillator;
 		private var l_num:Number;
+		private var o_num:Number;
 		
-		public function FlatWaveGenerator ( oscillator:IOscillator, level:Number )
+		public function FlatWaveGenerator ( oscillator:IOscillator, level:Number, offset:Number = 0 )
 		{
 			
 			w_osc = oscillator;
 			l_num = level;
+			o_num = offset;
 			
 		}
 		
 		public function Data ( i:Number ) : Number
 		{
 			
-			return w_osc.ValueAt ( i ) * l_num;
+			return w_osc.ValueAt ( i ) * l_num + o_num;
 			
 		}
 		
