@@ -5,9 +5,8 @@ plays an alternating sine wave and square wave.
 package
 {
 	
-	import XSynth.generators.CombinationGenerator;
+	import XSynth.generators.CombinedGenerator;
 	import XSynth.generators.FlatWaveGenerator;
-	import XSynth.oscillators.IOscillator;
 	import XSynth.oscillators.SineOscillator;
 	import XSynth.oscillators.SquareOscillator;
 	import XSynth.streams.DynamicAudioStream;
@@ -30,8 +29,8 @@ package
 		private var variOsc1:SquareOscillator;
 		private var variOsc2:SquareOscillator;
 		
-		private var mulGen1:CombinationGenerator;
-		private var mulGen2:CombinationGenerator;
+		private var mulGen1:CombinedGenerator;
+		private var mulGen2:CombinedGenerator;
 		
 		public function Main ()
 		{
@@ -50,8 +49,8 @@ package
 			wave3 = new FlatWaveGenerator ( variOsc1, 0.5, 0.5 ); // Level of 0.5 and offset of 0.5 gives us a range of [0 to 1] from a range of [-1 to 1]
 			wave4 = new FlatWaveGenerator ( variOsc2, 0.5, 0.5 );
 			
-			mulGen1 = new CombinationGenerator ( CombinationGenerator.MULTIPLICATIVE, wave1, wave3 ); // Multiply the waves by the alternating 0s and 1s
-			mulGen2 = new CombinationGenerator ( CombinationGenerator.MULTIPLICATIVE, wave2, wave4 );
+			mulGen1 = new CombinedGenerator ( CombinedGenerator.MULTIPLICATIVE, wave1, wave3 ); // Multiply the waves by the alternating 0s and 1s
+			mulGen2 = new CombinedGenerator ( CombinedGenerator.MULTIPLICATIVE, wave2, wave4 );
 			
 			ostream.AddGenerator ( mulGen1 ); // Add generators to the stream for playback
 			ostream.AddGenerator ( mulGen2 );

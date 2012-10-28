@@ -18,6 +18,7 @@ package XSynth.streams
 		function Start ( samples:int = -1 ) : void;
 		function Stop () : void;
 		function IsPlaying () : Boolean;
+		function CurrentSampleIndex () : Number;
 		
 	}
 	
