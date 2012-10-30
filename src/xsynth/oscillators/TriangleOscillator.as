@@ -76,6 +76,13 @@ package XSynth.oscillators
 			
 		}
 		
+		public final function SetSampleRate ( rate:uint ) : void
+		{
+			
+			s_rat = rate;
+			
+		}
+		
 	}
 	
 }
