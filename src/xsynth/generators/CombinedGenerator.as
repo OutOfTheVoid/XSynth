@@ -18,7 +18,7 @@ package XSynth.generators
 		public static const MULTIPLICATIVE:uint = 3;// o = a * b
 		public static const SUBTRACTIVE:uint = 4;   // o = a - b
 		public static const DIVISITIVE:uint = 5;    // o = a / b
-		public static const PYTHAGOREAN:uint = 6;   // o = √( a^2 + b^2 )
+		public static const PYTHAGOREAN:uint = 6;   // o = √( a^2 + b^2 ) / √2
 		
 		private var c_fnc:Function;
 		
@@ -76,12 +76,12 @@ package XSynth.generators
 			
 		}
 		
-		private final function AddFlat ( a:Number, b:Number ) : Number {	return a + b;						}
-		private final function AddMean ( a:Number, b:Number ) : Number {	return ( a + b ) / 2;				}
-		private final function Mul ( a:Number, b:Number ) : Number {		return a * b;						}
-		private final function Sub ( a:Number, b:Number ) : Number {		return a - b;						}
-		private final function Div ( a:Number, b:Number ) : Number {		return a * b;						}
-		private final function Pyth ( a:Number, b:Number ) : Number {		return Math.sqrt ( a * a + b * b );	}
+		private final function AddFlat ( a:Number, b:Number ) : Number	{	return a + b;										}
+		private final function AddMean ( a:Number, b:Number ) : Number	{	return ( a + b ) / 2;								}
+		private final function Mul ( a:Number, b:Number ) : Number		{	return a * b;										}
+		private final function Sub ( a:Number, b:Number ) : Number		{	return a - b;										}
+		private final function Div ( a:Number, b:Number ) : Number		{	return a * b;										}
+		private final function Pyth ( a:Number, b:Number ) : Number		{	return Math.sqrt ( a * a + b * b ) / Math.SQRT2;	}
 		
 		public final function get Level ():Number { return 1 };
 		
