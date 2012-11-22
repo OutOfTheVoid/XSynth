@@ -25,7 +25,7 @@ package XSynth.oscillators
 		public final function ValueAt ( index:Number ) : Number
 		{
 			
-			return s_spl.ValueAt ( ( index * f_div / s_rat ) + p_num );
+			return s_spl.ValueAt ( ( ( index * f_div / s_rat ) + p_num ) % 1 );
 			
 		}
 		
