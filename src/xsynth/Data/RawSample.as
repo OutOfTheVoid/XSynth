@@ -1,4 +1,4 @@
-package XSynth.Data
+package XSynth.data
 {
 	import flash.utils.ByteArray;
 	

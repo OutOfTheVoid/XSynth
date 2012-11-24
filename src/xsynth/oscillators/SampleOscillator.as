@@ -1,6 +1,6 @@
 package XSynth.oscillators
 {
-	import XSynth.Data.ISample;
+	import XSynth.data.ISample;
 	
 	public class SampleOscillator implements IOscillator
 	{
