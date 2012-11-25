@@ -5,7 +5,7 @@ XSynth audio synthesis library
 Flat Oscillator:
 A faux oscillator used to create a flat signal
 */
-package XSynth.oscillators
+package xsynth.oscillators
 {
 	
 	public class FlatOscillator implements IOscillator

@@ -5,10 +5,10 @@ XSynth audio synthesis library
 Combination Generator:
 Generator used to algorythmically combine two generators
 */
-package XSynth.generators
+package xsynth.generators
 {
 	
-	import XSynth.generators.IGenerator;
+	import xsynth.generators.IGenerator;
 	
 	public class CombinedGenerator implements IGenerator
 	{

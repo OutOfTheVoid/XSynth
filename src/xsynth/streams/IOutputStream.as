@@ -5,11 +5,11 @@ XSynth audio synthesis library
 Output Stream Interface:
 An interface to describe the standard for output streams
 */
-package XSynth.streams
+package xsynth.streams
 {
 	
-	import XSynth.IXSRateDependant;
-	import XSynth.generators.IGenerator;
+	import xsynth.IXSRateDependant;
+	import xsynth.generators.IGenerator;
 	
 	public interface IOutputStream extends IXSRateDependant
 	{

@@ -1,4 +1,4 @@
-package XSynth.utils
+package xsynth.utils
 {
 	
 	public class Notes

@@ -5,7 +5,7 @@ XSynth audio synthesis library
 Sawtooth Oscillator:
 An oscillator used to create a sine wave
 */
-package XSynth.oscillators
+package xsynth.oscillators
 {
 	
 	public class SineOscillator implements IOscillator

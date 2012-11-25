@@ -5,10 +5,10 @@ XSynth audio synthesis library
 Oscillator Interface:
 An interface used to describe the standard for an oscillator.
 */
-package XSynth.oscillators
+package xsynth.oscillators
 {
 	
-	import XSynth.IXSRateDependant;
+	import xsynth.IXSRateDependant;
 	
 	public interface IOscillator extends IXSRateDependant
 	{

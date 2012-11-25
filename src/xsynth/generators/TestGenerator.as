@@ -5,14 +5,14 @@ XSynth audio synthesis library
 Test Generator:
 A Generator used generate a test tone. ( 440 A at peak-to-peak level )
 */
-package XSynth.generators
+package xsynth.generators
 {
 	
-	import XSynth.generators.IGenerator;
-	import XSynth.oscillators.IOscillator;
-	import XSynth.oscillators.TriangleOscillator;
-	import XSynth.oscillators.SineOscillator;
-	import XSynth.oscillators.SquareOscillator;
+	import xsynth.generators.IGenerator;
+	import xsynth.oscillators.IOscillator;
+	import xsynth.oscillators.TriangleOscillator;
+	import xsynth.oscillators.SineOscillator;
+	import xsynth.oscillators.SquareOscillator;
 	
 	public class TestGenerator implements IGenerator
 	{

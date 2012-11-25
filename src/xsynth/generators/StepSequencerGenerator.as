@@ -1,6 +1,6 @@
-package XSynth.generators
+package xsynth.generators
 {
-	import XSynth.oscillators.IOscillator;
+	import xsynth.oscillators.IOscillator;
 	
 	public class StepSequencerGenerator implements IGenerator
 	{

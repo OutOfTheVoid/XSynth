@@ -6,10 +6,10 @@ Dynamic Audio Stream:
 An output stream that plays directly to the flash sound API
 can be dynamically changed while playing
 */
-package XSynth.streams
+package xsynth.streams
 {
 	
-	import XSynth.generators.IGenerator;
+	import xsynth.generators.IGenerator;
 	
 	import flash.events.Event;
 	import flash.events.EventDispatcher;

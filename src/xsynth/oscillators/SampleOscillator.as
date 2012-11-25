@@ -1,4 +1,4 @@
-package XSynth.oscillators
+package xsynth.oscillators
 {
 	import xsynth.data.ISample;
 	

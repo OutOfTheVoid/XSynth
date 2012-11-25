@@ -1,4 +1,4 @@
-package XSynth.generators
+package xsynth.generators
 {
 	
 	public final class MultiGenerator implements IGenerator

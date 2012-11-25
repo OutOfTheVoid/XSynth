@@ -5,9 +5,9 @@ XSynth audio synthesis library
 Flat Wave Generator:
 Generator used to play an un-altered generic wave from an oscilator instance
 */
-package XSynth.generators
+package xsynth.generators
 {
-	import XSynth.oscillators.IOscillator;
+	import xsynth.oscillators.IOscillator;
 	
 	public class FlatWaveGenerator implements IGenerator
 	{
