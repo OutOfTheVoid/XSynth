@@ -1,4 +1,4 @@
-package XSynth.data
+package xsynth.data_nupdt
 {
 	
 	public interface IWritableSample

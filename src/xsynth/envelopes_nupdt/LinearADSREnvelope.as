@@ -1,4 +1,4 @@
-package XSynth.envelopes
+package xsynth.envelopes_nupdt
 {
 	
 	public class LinearADSREnvelope implements IEnvelope

@@ -1,4 +1,4 @@
-package XSynth.envelopes
+package xsynth.envelopes_nupdt
 {
 	
 	public class ConstantEnvelope implements IEnvelope
