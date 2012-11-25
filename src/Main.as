@@ -5,11 +5,11 @@ plays an alternating sine wave and square wave.
 package
 {
 	
-	import XSynth.generators.CombinedGenerator;
-	import XSynth.generators.FlatWaveGenerator;
-	import XSynth.oscillators.SineOscillator;
-	import XSynth.oscillators.SquareOscillator;
-	import XSynth.streams.DynamicAudioStream;
+	import xsynth.generators.CombinedGenerator;
+	import xsynth.generators.FlatWaveGenerator;
+	import xsynth.oscillators.SineOscillator;
+	import xsynth.oscillators.SquareOscillator;
+	import xsynth.streams.DynamicAudioStream;
 	
 	import flash.display.Sprite;
 	
