@@ -1,5 +1,9 @@
+/*
+WARNING - Under development, not suited for anything besides curiosity.
+*/
 package xsynth.generators
 {
+	
 	import xsynth.oscillators.IOscillator;
 	
 	public class StepSequencerGenerator implements IGenerator
