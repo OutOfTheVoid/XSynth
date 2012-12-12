@@ -32,9 +32,7 @@ package xsynth.generators
 			
 		}
 		
-		public function get Level () : Number { return l_num };
-		
-		
+		public function get Level () : Number { return l_num }
 		
 		public final function SetSampleRate ( rate:uint ) : void
 		{
